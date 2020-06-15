@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiral</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: darkolivegreen;
+        }
+        .loader{
+            position: relative;
+            width: 300px;
+            height :300px;
+            transform-style: preserve-3d;
+            transform: perspective(500px) rotateX(60deg);
+        }
+        .loader span{
+            position: absolute;
+            display: block;
+            border: 5px solid #fff;
+            box-shadow: 0 5px #ccc,
+            inset 0 5px 0 #ccc;
+            box-sizing: border-box;
+            border-radius: 50%;
+            animation: animate 3s ease-in-out infinite;
+        }
+        @keyframes animate{
+            0%,100%{
+                transform: translateZ(-100px);
+            }
+            50%{
+                transform: translateZ(100px);
+            }
+        }
+        .loader span:nth-child(1){
+            left: 0;
+            top: 0;
+            bottom:0px;
+            right:0px;
+            animation-delay:0.6s;
+
+        }
+        .loader span:nth-child(2){
+            left: 10px;
+            top: 10px;
+            bottom:10px;
+            right:10px;
+            animation-delay:0.5s;
+
+        }
+        .loader span:nth-child(3){
+            left: 20px;
+            top: 20px;
+            bottom:20px;
+            right:20px;
+            animation-delay:0.4s;
+
+        }
+        .loader span:nth-child(4){
+            left: 30px;
+            top: 30px;
+            bottom:30px;
+            right:30px;
+            animation-delay:0.3s;
+
+        }
+        
+        .loader span:nth-child(5){
+            left: 40px;
+            top: 40px;
+            bottom:40px;
+            right:40px;
+            animation-delay:0.2s;
+
+        }
+        .loader span:nth-child(6){
+            left: 50px;
+            top: 50px;
+            bottom:50px;
+            right:50px;
+            animation-delay:0.1s;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="loader">
+
+<span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  
+</div>
+   
+</body>
+</html>
